@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronos | Custom Countdown</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts: Orbitron for Tech, Inter for UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Confetti Canvas Layer -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Background Gradients -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <div class="container" id="tilt-card">
+        <h1>Chronos</h1>
+        
+        <div class="current-time-section">
+            <div class="current-time-label">System Time (Unix)</div>
+            <div class="current-time" id="currentTimeMs">Loading...</div>
+        </div>
+
+        <div class="target-selector">
+            <label>Target Time</label>
+            <input type="time" id="targetTimeInput" value="17:00" step="1">
+        </div>
+
+        <div class="countdown-section">
+            <div class="countdown-label">Time Remaining</div>
+            <div class="countdown-display">
+                <div class="time-unit hours">
+                    <span class="time-value" id="hours">00</span>
+                    <span class="time-unit-label">Hours</span>
+                </div>
+                <div class="time-unit minutes">
+                    <span class="time-value" id="minutes">00</span>
+                    <span class="time-unit-label">Minutes</span>
+                </div>
+                <div class="time-unit seconds" id="secondsUnit">
+                    <span class="time-value" id="seconds">00</span>
+                    <span class="time-unit-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
